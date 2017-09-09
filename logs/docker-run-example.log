@@ -1,0 +1,659 @@
+[root@ssi-centos7 scripts]# ./getProductSource.sh ../SPECS/haproxy.spec && docker run --rm -v /root/rpmbuild:/root/rpmbuild:rw 5b8fd9922090  -bb ~/rpmbuild/SPECS/haproxy.spec --clean
+--2017-08-25 11:58:51--  http://www.haproxy.org/download/1.7/src/haproxy-1.7.8.tar.gz
+Resolving www.haproxy.org (www.haproxy.org)... 51.15.8.218
+Connecting to www.haproxy.org (www.haproxy.org)|51.15.8.218|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1746321 (1.7M) [application/x-tar]
+Saving to: ‘/root/rpmbuild/SOURCES/haproxy-1.7.8.tar.gz’
+
+100%[====================================================================================>] 1,746,321    371KB/s   in 4.7s   
+
+2017-08-25 11:58:56 (362 KB/s) - ‘/root/rpmbuild/SOURCES/haproxy-1.7.8.tar.gz’ saved [1746321/1746321]
+
+warning: bogus date in %changelog: Fri Mar 05 2014 Ilya Sukhanov <ilya@sukhanov.net>
+warning: bogus date in %changelog: Mon Oct 15 2013 Ilya Sukhanov <ilya@sukhanov.net>
+warning: bogus date in %changelog: Tue May 09 2007 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Jan 26 2007 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Jan 22 2007 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Jan 07 2007 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Jan 02 2007 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Oct 15 2006 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Sep 03 2006 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed Jul 09 2006 Willy Tarreau <w@1wt.eu>
+warning: bogus date in %changelog: Wed May 21 2006 Willy Tarreau <willy@w.ods.org>
+warning: bogus date in %changelog: Wed May 01 2006 Willy Tarreau <willy@w.ods.org>
+warning: bogus date in %changelog: Wed Apr 15 2006 Willy Tarreau <willy@w.ods.org>
+warning: bogus date in %changelog: Wed Mar 30 2006 Willy Tarreau <willy@w.ods.org>
+warning: bogus date in %changelog: Wed Mar 19 2006 Willy Tarreau <willy@w.ods.org>
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.uUvl6g
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd /root/rpmbuild/BUILD
++ rm -rf haproxy-1.7.8
++ /usr/bin/gzip -dc /root/rpmbuild/SOURCES/haproxy-1.7.8.tar.gz
++ /usr/bin/tar -xvvf -
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/
+-rw-rw-r-- root/root       639 2017-07-07 09:49 haproxy-1.7.8/.gitignore
+-rw-rw-r-- root/root    405007 2017-07-07 09:49 haproxy-1.7.8/CHANGELOG
+-rw-rw-r-- root/root     40231 2017-07-07 09:49 haproxy-1.7.8/CONTRIBUTING
+-rw-rw-r-- root/root      2029 2017-07-07 09:49 haproxy-1.7.8/LICENSE
+-rw-rw-r-- root/root      2310 2017-07-07 09:49 haproxy-1.7.8/MAINTAINERS
+-rw-rw-r-- root/root     33764 2017-07-07 09:49 haproxy-1.7.8/Makefile
+-rw-rw-r-- root/root     15014 2017-07-07 09:49 haproxy-1.7.8/README
+-rw-rw-r-- root/root      2922 2017-07-07 09:49 haproxy-1.7.8/ROADMAP
+-rw-rw-r-- root/root        14 2017-07-07 09:49 haproxy-1.7.8/SUBVERS
+-rw-rw-r-- root/root        24 2017-07-07 09:49 haproxy-1.7.8/VERDATE
+-rw-rw-r-- root/root         6 2017-07-07 09:49 haproxy-1.7.8/VERSION
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/base64/
+-rw-rw-r-- root/root      1415 2017-07-07 09:49 haproxy-1.7.8/contrib/base64/base64rev-gen.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/debug/
+-rw-rw-r-- root/root       200 2017-07-07 09:49 haproxy-1.7.8/contrib/debug/Makefile
+-rw-rw-r-- root/root     10712 2017-07-07 09:49 haproxy-1.7.8/contrib/debug/flags.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/halog/
+-rw-rw-r-- root/root       753 2017-07-07 09:49 haproxy-1.7.8/contrib/halog/Makefile
+-rw-rw-r-- root/root      7701 2017-07-07 09:49 haproxy-1.7.8/contrib/halog/fgets2.c
+-rw-rw-r-- root/root     47138 2017-07-07 09:49 haproxy-1.7.8/contrib/halog/halog.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/ip6range/
+-rw-rw-r-- root/root       160 2017-07-07 09:49 haproxy-1.7.8/contrib/ip6range/Makefile
+-rw-rw-r-- root/root     10973 2017-07-07 09:49 haproxy-1.7.8/contrib/ip6range/ip6range.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/iprange/
+-rw-rw-r-- root/root       159 2017-07-07 09:49 haproxy-1.7.8/contrib/iprange/Makefile
+-rw-rw-r-- root/root      6037 2017-07-07 09:49 haproxy-1.7.8/contrib/iprange/iprange.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/
+-rw-rw-r-- root/root      4977 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/README
+-rw-rw-r-- root/root     30450 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/cacti_data_query_haproxy_backends.xml
+-rw-rw-r-- root/root     30454 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/cacti_data_query_haproxy_frontends.xml
+-rw-rw-r-- root/root      5554 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/haproxy.pl
+-rw-rw-r-- root/root      2097 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/haproxy_backend.xml
+-rw-rw-r-- root/root      2096 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/haproxy_frontend.xml
+-rw-rw-r-- root/root      2275 2017-07-07 09:49 haproxy-1.7.8/contrib/netsnmp-perl/haproxy_socket.xml
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/selinux/
+-rw-rw-r-- root/root       648 2017-07-07 09:49 haproxy-1.7.8/contrib/selinux/README
+-rw-rw-r-- root/root       375 2017-07-07 09:49 haproxy-1.7.8/contrib/selinux/haproxy.fc
+-rw-rw-r-- root/root        57 2017-07-07 09:49 haproxy-1.7.8/contrib/selinux/haproxy.if
+-rw-rw-r-- root/root      1682 2017-07-07 09:49 haproxy-1.7.8/contrib/selinux/haproxy.te
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/spoa_example/
+-rw-rw-r-- root/root       311 2017-07-07 09:49 haproxy-1.7.8/contrib/spoa_example/Makefile
+-rw-rw-r-- root/root      2860 2017-07-07 09:49 haproxy-1.7.8/contrib/spoa_example/README
+-rw-rw-r-- root/root     28053 2017-07-07 09:49 haproxy-1.7.8/contrib/spoa_example/spoa.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/systemd/
+-rw-rw-r-- root/root       166 2017-07-07 09:49 haproxy-1.7.8/contrib/systemd/Makefile
+-rw-rw-r-- root/root       411 2017-07-07 09:49 haproxy-1.7.8/contrib/systemd/haproxy.service.in
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/tcploop/
+-rw-rw-r-- root/root       177 2017-07-07 09:49 haproxy-1.7.8/contrib/tcploop/Makefile
+-rw-rw-r-- root/root     21884 2017-07-07 09:49 haproxy-1.7.8/contrib/tcploop/tcploop.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/contrib/trace/
+-rwxrwxr-x root/root      1785 2017-07-07 09:49 haproxy-1.7.8/contrib/trace/trace.awk
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/doc/
+-rw-rw-r-- root/root      5771 2017-07-07 09:49 haproxy-1.7.8/doc/51Degrees-device-detection.txt
+-rw-rw-r-- root/root      2087 2017-07-07 09:49 haproxy-1.7.8/doc/DeviceAtlas-device-detection.txt
+-rw-rw-r-- root/root     32832 2017-07-07 09:49 haproxy-1.7.8/doc/SPOE.txt
+-rw-rw-r-- root/root      2404 2017-07-07 09:49 haproxy-1.7.8/doc/WURFL-device-detection.txt
+-rw-rw-r-- root/root      8536 2017-07-07 09:49 haproxy-1.7.8/doc/acl.fig
+-rw-rw-r-- root/root     60455 2017-07-07 09:49 haproxy-1.7.8/doc/architecture.txt
+-rw-rw-r-- root/root      2152 2017-07-07 09:49 haproxy-1.7.8/doc/close-options.txt
+-rw-rw-r-- root/root     38581 2017-07-07 09:49 haproxy-1.7.8/doc/coding-style.txt
+-rw-rw-r-- root/root    823654 2017-07-07 09:49 haproxy-1.7.8/doc/configuration.txt
+-rw-rw-r-- root/root      1082 2017-07-07 09:49 haproxy-1.7.8/doc/cookie-options.txt
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/
+-rw-rw-r-- root/root      1223 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/backends-v0.txt
+-rw-rw-r-- root/root      3935 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/backends.txt
+-rw-rw-r-- root/root      2714 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/be-fe-changes.txt
+-rw-rw-r-- root/root      7352 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/binding-possibilities.txt
+-rw-rw-r-- root/root      6284 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/buffer-redesign.txt
+-rw-rw-r-- root/root     38634 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/buffers.fig
+-rw-rw-r-- root/root      9483 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/config-language.txt
+-rw-rw-r-- root/root      9249 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/connection-reuse.txt
+-rw-rw-r-- root/root      1637 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/connection-sharing.txt
+-rw-rw-r-- root/root      2357 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/dynamic-buffers.txt
+-rw-rw-r-- root/root      9475 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/entities-v2.txt
+-rw-rw-r-- root/root      2286 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/how-it-works.txt
+-rw-rw-r-- root/root     16371 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/http2.txt
+-rw-rw-r-- root/root       144 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/http_load_time.url
+-rw-rw-r-- root/root      4435 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/rate-shaping.txt
+-rw-rw-r-- root/root       408 2017-07-07 09:49 haproxy-1.7.8/doc/design-thoughts/sess_par_sec.txt
+-rw-rw-r-- root/root     17990 2017-07-07 09:49 haproxy-1.7.8/doc/gpl.txt
+-rw-rw-r-- root/root      6746 2017-07-07 09:49 haproxy-1.7.8/doc/haproxy.1
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/doc/internals/
+-rw-rw-r-- root/root      3367 2017-07-07 09:49 haproxy-1.7.8/doc/internals/acl.txt
+-rw-rw-r-- root/root      8526 2017-07-07 09:49 haproxy-1.7.8/doc/internals/body-parsing.txt
+-rw-rw-r-- root/root      5207 2017-07-07 09:49 haproxy-1.7.8/doc/internals/buffer-operations.txt
+-rw-rw-r-- root/root      5802 2017-07-07 09:49 haproxy-1.7.8/doc/internals/buffer-ops.fig
+-rw-rw-r-- root/root      1275 2017-07-07 09:49 haproxy-1.7.8/doc/internals/connect-status.txt
+-rw-rw-r-- root/root      8245 2017-07-07 09:49 haproxy-1.7.8/doc/internals/connection-header.txt
+-rw-rw-r-- root/root      1657 2017-07-07 09:49 haproxy-1.7.8/doc/internals/connection-scale.txt
+-rw-rw-r-- root/root      6461 2017-07-07 09:49 haproxy-1.7.8/doc/internals/entities-v2.txt
+-rw-rw-r-- root/root     10037 2017-07-07 09:49 haproxy-1.7.8/doc/internals/entities.fig
+-rw-rw-r-- root/root      6295 2017-07-07 09:49 haproxy-1.7.8/doc/internals/entities.pdf
+-rw-rw-r-- root/root     29154 2017-07-07 09:49 haproxy-1.7.8/doc/internals/entities.svg
+-rw-rw-r-- root/root      3813 2017-07-07 09:49 haproxy-1.7.8/doc/internals/entities.txt
+-rw-rw-r-- root/root     51256 2017-07-07 09:49 haproxy-1.7.8/doc/internals/filters.txt
+-rw-rw-r-- root/root      4482 2017-07-07 09:49 haproxy-1.7.8/doc/internals/hashing.txt
+-rw-rw-r-- root/root      4508 2017-07-07 09:49 haproxy-1.7.8/doc/internals/header-parser-speed.txt
+-rw-rw-r-- root/root      4403 2017-07-07 09:49 haproxy-1.7.8/doc/internals/header-tree.txt
+-rw-rw-r-- root/root      2187 2017-07-07 09:49 haproxy-1.7.8/doc/internals/http-cookies.txt
+-rw-rw-r-- root/root       123 2017-07-07 09:49 haproxy-1.7.8/doc/internals/http-docs.txt
+-rw-rw-r-- root/root     12790 2017-07-07 09:49 haproxy-1.7.8/doc/internals/http-parsing.txt
+-rw-rw-r-- root/root     23809 2017-07-07 09:49 haproxy-1.7.8/doc/internals/list.fig
+-rw-rw-r-- root/root      5040 2017-07-07 09:49 haproxy-1.7.8/doc/internals/lua_socket.fig
+-rw-rw-r-- root/root     14905 2017-07-07 09:49 haproxy-1.7.8/doc/internals/lua_socket.pdf
+-rw-rw-r-- root/root      1858 2017-07-07 09:49 haproxy-1.7.8/doc/internals/naming.txt
+-rw-rw-r-- root/root      5631 2017-07-07 09:49 haproxy-1.7.8/doc/internals/pattern.dia
+-rw-rw-r-- root/root     37269 2017-07-07 09:49 haproxy-1.7.8/doc/internals/pattern.pdf
+-rw-rw-r-- root/root      4820 2017-07-07 09:49 haproxy-1.7.8/doc/internals/polling-states.fig
+-rw-rw-r-- root/root       774 2017-07-07 09:49 haproxy-1.7.8/doc/internals/repartition-be-fe-fi.txt
+-rw-rw-r-- root/root      5022 2017-07-07 09:49 haproxy-1.7.8/doc/internals/sequence.fig
+-rw-rw-r-- root/root       742 2017-07-07 09:49 haproxy-1.7.8/doc/internals/stats-v2.txt
+-rw-rw-r-- root/root     17801 2017-07-07 09:49 haproxy-1.7.8/doc/internals/stream-sock-states.fig
+-rw-rw-r-- root/root     83152 2017-07-07 09:49 haproxy-1.7.8/doc/intro.txt
+-rw-rw-r-- root/root     26436 2017-07-07 09:49 haproxy-1.7.8/doc/lgpl.txt
+-rw-rw-r-- root/root      3471 2017-07-07 09:49 haproxy-1.7.8/doc/linux-syn-cookies.txt
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/
+-rw-rw-r-- root/root      5584 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/Makefile
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/_static/
+-rw-rw-r-- root/root      2200 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/_static/channel.fig
+-rw-rw-r-- root/root     18457 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/_static/channel.png
+-rw-rw-r-- root/root      7778 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/conf.py
+-rw-rw-r-- root/root     71920 2017-07-07 09:49 haproxy-1.7.8/doc/lua-api/index.rst
+-rw-rw-r-- root/root     39528 2017-07-07 09:49 haproxy-1.7.8/doc/lua.txt
+-rw-rw-r-- root/root    135166 2017-07-07 09:49 haproxy-1.7.8/doc/management.txt
+-rw-rw-r-- root/root      1169 2017-07-07 09:49 haproxy-1.7.8/doc/netscaler-client-ip-insertion-protocol.txt
+-rw-rw-r-- root/root      3539 2017-07-07 09:49 haproxy-1.7.8/doc/network-namespaces.txt
+-rw-rw-r-- root/root     49279 2017-07-07 09:49 haproxy-1.7.8/doc/proxy-protocol.txt
+-rw-rw-r-- root/root      6525 2017-07-07 09:49 haproxy-1.7.8/doc/queuing.fig
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/ebtree/
+-rw-rw-r-- root/root     26436 2017-07-07 09:49 haproxy-1.7.8/ebtree/LICENSE
+-rw-rw-r-- root/root       865 2017-07-07 09:49 haproxy-1.7.8/ebtree/compiler.h
+-rw-rw-r-- root/root      7090 2017-07-07 09:49 haproxy-1.7.8/ebtree/eb32tree.c
+-rw-rw-r-- root/root     16186 2017-07-07 09:49 haproxy-1.7.8/ebtree/eb32tree.h
+-rw-rw-r-- root/root      7090 2017-07-07 09:49 haproxy-1.7.8/ebtree/eb64tree.c
+-rw-rw-r-- root/root     19085 2017-07-07 09:49 haproxy-1.7.8/ebtree/eb64tree.h
+-rw-rw-r-- root/root      1592 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebimtree.c
+-rw-rw-r-- root/root     10709 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebimtree.h
+-rw-rw-r-- root/root      1704 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebistree.c
+-rw-rw-r-- root/root     11032 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebistree.h
+-rw-rw-r-- root/root      2852 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebmbtree.c
+-rw-rw-r-- root/root     26668 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebmbtree.h
+-rw-rw-r-- root/root      6938 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebpttree.c
+-rw-rw-r-- root/root      5962 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebpttree.h
+-rw-rw-r-- root/root      1695 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebsttree.c
+-rw-rw-r-- root/root     10802 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebsttree.h
+-rw-rw-r-- root/root      1052 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebtree.c
+-rw-rw-r-- root/root     33101 2017-07-07 09:49 haproxy-1.7.8/ebtree/ebtree.h
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/examples/
+-rw-rw-r-- root/root      3740 2017-07-07 09:49 haproxy-1.7.8/examples/acl-content-sw.cfg
+-rw-rw-r-- root/root      3042 2017-07-07 09:49 haproxy-1.7.8/examples/auth.cfg
+-rwxrwxr-x root/root     16066 2017-07-07 09:49 haproxy-1.7.8/examples/check
+-rw-rw-r-- root/root      2063 2017-07-07 09:49 haproxy-1.7.8/examples/check.conf
+-rw-rw-r-- root/root      2499 2017-07-07 09:49 haproxy-1.7.8/examples/content-sw-sample.cfg
+-rw-rw-r-- root/root       261 2017-07-07 09:49 haproxy-1.7.8/examples/debug2ansi
+-rw-rw-r-- root/root       372 2017-07-07 09:49 haproxy-1.7.8/examples/debug2html
+-rw-rw-r-- root/root       229 2017-07-07 09:49 haproxy-1.7.8/examples/debugfind
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/
+-rw-rw-r-- root/root       188 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/400.http
+-rw-rw-r-- root/root       189 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/403.http
+-rw-rw-r-- root/root       213 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/408.http
+-rw-rw-r-- root/root       186 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/500.http
+-rw-rw-r-- root/root       205 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/502.http
+-rw-rw-r-- root/root       213 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/503.http
+-rw-rw-r-- root/root       195 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/504.http
+-rw-rw-r-- root/root       301 2017-07-07 09:49 haproxy-1.7.8/examples/errorfiles/README
+-rw-rw-r-- root/root      2381 2017-07-07 09:49 haproxy-1.7.8/examples/haproxy.init
+-rw-rw-r-- root/root      9861 2017-07-07 09:49 haproxy-1.7.8/examples/haproxy.spec
+-rw-rw-r-- root/root      7753 2017-07-07 09:49 haproxy-1.7.8/examples/haproxy.vim
+-rw-rw-r-- root/root      1039 2017-07-07 09:49 haproxy-1.7.8/examples/init.haproxy
+-rw-rw-r-- root/root      1234 2017-07-07 09:49 haproxy-1.7.8/examples/option-http_proxy.cfg
+-rw-rw-r-- root/root      1528 2017-07-07 09:49 haproxy-1.7.8/examples/seamless_reload.txt
+-rw-rw-r-- root/root       619 2017-07-07 09:49 haproxy-1.7.8/examples/ssl.cfg
+-rw-rw-r-- root/root      1713 2017-07-07 09:49 haproxy-1.7.8/examples/stats_haproxy.sh
+-rw-rw-r-- root/root      2274 2017-07-07 09:49 haproxy-1.7.8/examples/transparent_proxy.cfg
+-rw-rw-r-- root/root      1485 2017-07-07 09:49 haproxy-1.7.8/examples/wurfl-example.cfg
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/include/
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/include/common/
+-rw-rw-r-- root/root      2389 2017-07-07 09:49 haproxy-1.7.8/include/common/accept4.h
+-rw-rw-r-- root/root       735 2017-07-07 09:49 haproxy-1.7.8/include/common/base64.h
+-rw-rw-r-- root/root     17088 2017-07-07 09:49 haproxy-1.7.8/include/common/buffer.h
+-rw-rw-r-- root/root      4261 2017-07-07 09:49 haproxy-1.7.8/include/common/cfgparse.h
+-rw-rw-r-- root/root      5696 2017-07-07 09:49 haproxy-1.7.8/include/common/chunk.h
+-rw-rw-r-- root/root      4075 2017-07-07 09:49 haproxy-1.7.8/include/common/compat.h
+-rw-rw-r-- root/root      2962 2017-07-07 09:49 haproxy-1.7.8/include/common/compiler.h
+-rw-rw-r-- root/root      2285 2017-07-07 09:49 haproxy-1.7.8/include/common/config.h
+-rw-rw-r-- root/root      2168 2017-07-07 09:49 haproxy-1.7.8/include/common/debug.h
+-rw-rw-r-- root/root     10089 2017-07-07 09:49 haproxy-1.7.8/include/common/defaults.h
+-rw-rw-r-- root/root      2953 2017-07-07 09:49 haproxy-1.7.8/include/common/epoll.h
+-rw-rw-r-- root/root      2759 2017-07-07 09:49 haproxy-1.7.8/include/common/errors.h
+-rw-rw-r-- root/root      1104 2017-07-07 09:49 haproxy-1.7.8/include/common/hash.h
+-rw-rw-r-- root/root      6202 2017-07-07 09:49 haproxy-1.7.8/include/common/memory.h
+-rw-rw-r-- root/root      5752 2017-07-07 09:49 haproxy-1.7.8/include/common/mini-clist.h
+-rw-rw-r-- root/root       513 2017-07-07 09:49 haproxy-1.7.8/include/common/namespace.h
+-rw-rw-r-- root/root      4333 2017-07-07 09:49 haproxy-1.7.8/include/common/rbtree.h
+-rw-rw-r-- root/root      4989 2017-07-07 09:49 haproxy-1.7.8/include/common/regex.h
+-rw-rw-r-- root/root      2416 2017-07-07 09:49 haproxy-1.7.8/include/common/splice.h
+-rw-rw-r-- root/root     39473 2017-07-07 09:49 haproxy-1.7.8/include/common/standard.h
+-rw-rw-r-- root/root      4738 2017-07-07 09:49 haproxy-1.7.8/include/common/syscall.h
+-rw-rw-r-- root/root      1021 2017-07-07 09:49 haproxy-1.7.8/include/common/template.h
+-rw-rw-r-- root/root      4815 2017-07-07 09:49 haproxy-1.7.8/include/common/ticks.h
+-rw-rw-r-- root/root     18570 2017-07-07 09:49 haproxy-1.7.8/include/common/time.h
+-rw-rw-r-- root/root      1451 2017-07-07 09:49 haproxy-1.7.8/include/common/tools.h
+-rw-rw-r-- root/root      3553 2017-07-07 09:49 haproxy-1.7.8/include/common/uri_auth.h
+-rw-rw-r-- root/root      1891 2017-07-07 09:49 haproxy-1.7.8/include/common/version.h
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/include/import/
+-rw-rw-r-- root/root       132 2017-07-07 09:49 haproxy-1.7.8/include/import/51d.h
+-rw-rw-r-- root/root       183 2017-07-07 09:49 haproxy-1.7.8/include/import/da.h
+-rw-rw-r-- root/root      3759 2017-07-07 09:49 haproxy-1.7.8/include/import/lru.h
+-rw-rw-r-- root/root      5776 2017-07-07 09:49 haproxy-1.7.8/include/import/xxhash.h
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/include/proto/
+-rw-rw-r-- root/root      5991 2017-07-07 09:49 haproxy-1.7.8/include/proto/acl.h
+-rw-rw-r-- root/root      1925 2017-07-07 09:49 haproxy-1.7.8/include/proto/action.h
+-rw-rw-r-- root/root      3738 2017-07-07 09:49 haproxy-1.7.8/include/proto/applet.h
+-rw-rw-r-- root/root      3625 2017-07-07 09:49 haproxy-1.7.8/include/proto/arg.h
+-rw-rw-r-- root/root      1000 2017-07-07 09:49 haproxy-1.7.8/include/proto/auth.h
+-rw-rw-r-- root/root      3843 2017-07-07 09:49 haproxy-1.7.8/include/proto/backend.h
+-rw-rw-r-- root/root     20456 2017-07-07 09:49 haproxy-1.7.8/include/proto/channel.h
+-rw-rw-r-- root/root      2103 2017-07-07 09:49 haproxy-1.7.8/include/proto/checks.h
+-rw-rw-r-- root/root      1090 2017-07-07 09:49 haproxy-1.7.8/include/proto/cli.h
+-rw-rw-r-- root/root      1368 2017-07-07 09:49 haproxy-1.7.8/include/proto/compression.h
+-rw-rw-r-- root/root     21435 2017-07-07 09:49 haproxy-1.7.8/include/proto/connection.h
+-rw-rw-r-- root/root      2231 2017-07-07 09:49 haproxy-1.7.8/include/proto/dns.h
+-rw-rw-r-- root/root      9686 2017-07-07 09:49 haproxy-1.7.8/include/proto/fd.h
+-rw-rw-r-- root/root      7922 2017-07-07 09:49 haproxy-1.7.8/include/proto/filters.h
+-rw-rw-r-- root/root      1059 2017-07-07 09:49 haproxy-1.7.8/include/proto/flt_http_comp.h
+-rw-rw-r-- root/root      9127 2017-07-07 09:49 haproxy-1.7.8/include/proto/freq_ctr.h
+-rw-rw-r-- root/root      1096 2017-07-07 09:49 haproxy-1.7.8/include/proto/frontend.h
+-rw-rw-r-- root/root      3044 2017-07-07 09:49 haproxy-1.7.8/include/proto/hdr_idx.h
+-rw-rw-r-- root/root      1625 2017-07-07 09:49 haproxy-1.7.8/include/proto/hlua.h
+-rw-rw-r-- root/root       608 2017-07-07 09:49 haproxy-1.7.8/include/proto/hlua_fcn.h
+-rw-rw-r-- root/root      1291 2017-07-07 09:49 haproxy-1.7.8/include/proto/lb_chash.h
+-rw-rw-r-- root/root      1199 2017-07-07 09:49 haproxy-1.7.8/include/proto/lb_fas.h
+-rw-rw-r-- root/root      1213 2017-07-07 09:49 haproxy-1.7.8/include/proto/lb_fwlc.h
+-rw-rw-r-- root/root      1210 2017-07-07 09:49 haproxy-1.7.8/include/proto/lb_fwrr.h
+-rw-rw-r-- root/root      1402 2017-07-07 09:49 haproxy-1.7.8/include/proto/lb_map.h
+-rw-rw-r-- root/root      5885 2017-07-07 09:49 haproxy-1.7.8/include/proto/listener.h
+-rw-rw-r-- root/root      4375 2017-07-07 09:49 haproxy-1.7.8/include/proto/log.h
+-rw-rw-r-- root/root      1417 2017-07-07 09:49 haproxy-1.7.8/include/proto/map.h
+-rw-rw-r-- root/root      4051 2017-07-07 09:49 haproxy-1.7.8/include/proto/obj_type.h
+-rw-rw-r-- root/root      4439 2017-07-07 09:49 haproxy-1.7.8/include/proto/openssl-compat.h
+-rw-rw-r-- root/root      9582 2017-07-07 09:49 haproxy-1.7.8/include/proto/pattern.h
+-rw-rw-r-- root/root      1249 2017-07-07 09:49 haproxy-1.7.8/include/proto/payload.h
+-rw-rw-r-- root/root      1220 2017-07-07 09:49 haproxy-1.7.8/include/proto/peers.h
+-rw-rw-r-- root/root      1670 2017-07-07 09:49 haproxy-1.7.8/include/proto/pipe.h
+-rw-rw-r-- root/root      2158 2017-07-07 09:49 haproxy-1.7.8/include/proto/port_range.h
+-rw-rw-r-- root/root     14200 2017-07-07 09:49 haproxy-1.7.8/include/proto/proto_http.h
+-rw-rw-r-- root/root      1780 2017-07-07 09:49 haproxy-1.7.8/include/proto/proto_tcp.h
+-rw-rw-r-- root/root       963 2017-07-07 09:49 haproxy-1.7.8/include/proto/proto_udp.h
+-rw-rw-r-- root/root      1342 2017-07-07 09:49 haproxy-1.7.8/include/proto/proto_uxst.h
+-rw-rw-r-- root/root      2308 2017-07-07 09:49 haproxy-1.7.8/include/proto/protocol.h
+-rw-rw-r-- root/root      5411 2017-07-07 09:49 haproxy-1.7.8/include/proto/proxy.h
+-rw-rw-r-- root/root      2825 2017-07-07 09:49 haproxy-1.7.8/include/proto/queue.h
+-rw-rw-r-- root/root      1087 2017-07-07 09:49 haproxy-1.7.8/include/proto/raw_sock.h
+-rw-rw-r-- root/root      5694 2017-07-07 09:49 haproxy-1.7.8/include/proto/sample.h
+-rw-rw-r-- root/root     10252 2017-07-07 09:49 haproxy-1.7.8/include/proto/server.h
+-rw-rw-r-- root/root      2170 2017-07-07 09:49 haproxy-1.7.8/include/proto/session.h
+-rw-rw-r-- root/root      1549 2017-07-07 09:49 haproxy-1.7.8/include/proto/shctx.h
+-rw-rw-r-- root/root      1195 2017-07-07 09:49 haproxy-1.7.8/include/proto/signal.h
+-rw-rw-r-- root/root      3432 2017-07-07 09:49 haproxy-1.7.8/include/proto/ssl_sock.h
+-rw-rw-r-- root/root      3418 2017-07-07 09:49 haproxy-1.7.8/include/proto/stats.h
+-rw-rw-r-- root/root      6296 2017-07-07 09:49 haproxy-1.7.8/include/proto/stick_table.h
+-rw-rw-r-- root/root      9296 2017-07-07 09:49 haproxy-1.7.8/include/proto/stream.h
+-rw-rw-r-- root/root     12270 2017-07-07 09:49 haproxy-1.7.8/include/proto/stream_interface.h
+-rw-rw-r-- root/root      9032 2017-07-07 09:49 haproxy-1.7.8/include/proto/task.h
+-rw-rw-r-- root/root      1856 2017-07-07 09:49 haproxy-1.7.8/include/proto/tcp_rules.h
+-rw-rw-r-- root/root      1046 2017-07-07 09:49 haproxy-1.7.8/include/proto/template.h
+-rw-rw-r-- root/root       768 2017-07-07 09:49 haproxy-1.7.8/include/proto/vars.h
+-rw-rw-r-- root/root       108 2017-07-07 09:49 haproxy-1.7.8/include/proto/wurfl.h
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/include/types/
+-rw-rw-r-- root/root      6258 2017-07-07 09:49 haproxy-1.7.8/include/types/acl.h
+-rw-rw-r-- root/root      5313 2017-07-07 09:49 haproxy-1.7.8/include/types/action.h
+-rw-rw-r-- root/root      6526 2017-07-07 09:49 haproxy-1.7.8/include/types/applet.h
+-rw-rw-r-- root/root      4699 2017-07-07 09:49 haproxy-1.7.8/include/types/arg.h
+-rw-rw-r-- root/root      1225 2017-07-07 09:49 haproxy-1.7.8/include/types/auth.h
+-rw-rw-r-- root/root      7684 2017-07-07 09:49 haproxy-1.7.8/include/types/backend.h
+-rw-rw-r-- root/root      1482 2017-07-07 09:49 haproxy-1.7.8/include/types/capture.h
+-rw-rw-r-- root/root     16319 2017-07-07 09:49 haproxy-1.7.8/include/types/channel.h
+-rw-rw-r-- root/root      9298 2017-07-07 09:49 haproxy-1.7.8/include/types/checks.h
+-rw-rw-r-- root/root      1834 2017-07-07 09:49 haproxy-1.7.8/include/types/cli.h
+-rw-rw-r-- root/root      2762 2017-07-07 09:49 haproxy-1.7.8/include/types/compression.h
+-rw-rw-r-- root/root     16997 2017-07-07 09:49 haproxy-1.7.8/include/types/connection.h
+-rw-rw-r-- root/root      6083 2017-07-07 09:49 haproxy-1.7.8/include/types/counters.h
+-rw-rw-r-- root/root     11086 2017-07-07 09:49 haproxy-1.7.8/include/types/dns.h
+-rw-rw-r-- root/root      6335 2017-07-07 09:49 haproxy-1.7.8/include/types/fd.h
+-rw-rw-r-- root/root     12682 2017-07-07 09:49 haproxy-1.7.8/include/types/filters.h
+-rw-rw-r-- root/root      1949 2017-07-07 09:49 haproxy-1.7.8/include/types/freq_ctr.h
+-rw-rw-r-- root/root     10689 2017-07-07 09:49 haproxy-1.7.8/include/types/global.h
+-rw-rw-r-- root/root      3212 2017-07-07 09:49 haproxy-1.7.8/include/types/hdr_idx.h
+-rw-rw-r-- root/root      5356 2017-07-07 09:49 haproxy-1.7.8/include/types/hlua.h
+-rw-rw-r-- root/root      1371 2017-07-07 09:49 haproxy-1.7.8/include/types/lb_chash.h
+-rw-rw-r-- root/root      1211 2017-07-07 09:49 haproxy-1.7.8/include/types/lb_fas.h
+-rw-rw-r-- root/root      1225 2017-07-07 09:49 haproxy-1.7.8/include/types/lb_fwlc.h
+-rw-rw-r-- root/root      1782 2017-07-07 09:49 haproxy-1.7.8/include/types/lb_fwrr.h
+-rw-rw-r-- root/root      1292 2017-07-07 09:49 haproxy-1.7.8/include/types/lb_map.h
+-rw-rw-r-- root/root     10918 2017-07-07 09:49 haproxy-1.7.8/include/types/listener.h
+-rw-rw-r-- root/root      4766 2017-07-07 09:49 haproxy-1.7.8/include/types/log.h
+-rw-rw-r-- root/root      2294 2017-07-07 09:49 haproxy-1.7.8/include/types/mailers.h
+-rw-rw-r-- root/root      1222 2017-07-07 09:49 haproxy-1.7.8/include/types/map.h
+-rw-rw-r-- root/root      2007 2017-07-07 09:49 haproxy-1.7.8/include/types/obj_type.h
+-rw-rw-r-- root/root      9143 2017-07-07 09:49 haproxy-1.7.8/include/types/pattern.h
+-rw-rw-r-- root/root      3214 2017-07-07 09:49 haproxy-1.7.8/include/types/peers.h
+-rw-rw-r-- root/root      1350 2017-07-07 09:49 haproxy-1.7.8/include/types/pipe.h
+-rw-rw-r-- root/root      1229 2017-07-07 09:49 haproxy-1.7.8/include/types/port_range.h
+-rw-rw-r-- root/root     19402 2017-07-07 09:49 haproxy-1.7.8/include/types/proto_http.h
+-rw-rw-r-- root/root      1825 2017-07-07 09:49 haproxy-1.7.8/include/types/proto_udp.h
+-rw-rw-r-- root/root      3310 2017-07-07 09:49 haproxy-1.7.8/include/types/protocol.h
+-rw-rw-r-- root/root     26917 2017-07-07 09:49 haproxy-1.7.8/include/types/proxy.h
+-rw-rw-r-- root/root      1268 2017-07-07 09:49 haproxy-1.7.8/include/types/queue.h
+-rw-rw-r-- root/root     17563 2017-07-07 09:49 haproxy-1.7.8/include/types/sample.h
+-rw-rw-r-- root/root     14860 2017-07-07 09:49 haproxy-1.7.8/include/types/server.h
+-rw-rw-r-- root/root      1912 2017-07-07 09:49 haproxy-1.7.8/include/types/session.h
+-rw-rw-r-- root/root      1377 2017-07-07 09:49 haproxy-1.7.8/include/types/signal.h
+-rw-rw-r-- root/root      1626 2017-07-07 09:49 haproxy-1.7.8/include/types/ssl_sock.h
+-rw-rw-r-- root/root     11342 2017-07-07 09:49 haproxy-1.7.8/include/types/stats.h
+-rw-rw-r-- root/root      8670 2017-07-07 09:49 haproxy-1.7.8/include/types/stick_table.h
+-rw-rw-r-- root/root      9125 2017-07-07 09:49 haproxy-1.7.8/include/types/stream.h
+-rw-rw-r-- root/root      5831 2017-07-07 09:49 haproxy-1.7.8/include/types/stream_interface.h
+-rw-rw-r-- root/root      3183 2017-07-07 09:49 haproxy-1.7.8/include/types/task.h
+-rw-rw-r-- root/root      1017 2017-07-07 09:49 haproxy-1.7.8/include/types/template.h
+-rw-rw-r-- root/root       592 2017-07-07 09:49 haproxy-1.7.8/include/types/vars.h
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/scripts/
+-rwxrwxr-x root/root      6023 2017-07-07 09:49 haproxy-1.7.8/scripts/announce-release
+-rwxrwxr-x root/root      6502 2017-07-07 09:49 haproxy-1.7.8/scripts/create-release
+-rwxrwxr-x root/root      7752 2017-07-07 09:49 haproxy-1.7.8/scripts/git-show-backports
+-rwxrwxr-x root/root      4185 2017-07-07 09:49 haproxy-1.7.8/scripts/publish-release
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/src/
+-rw-rw-r-- root/root     20159 2017-07-07 09:49 haproxy-1.7.8/src/51d.c
+-rw-rw-r-- root/root     41145 2017-07-07 09:49 haproxy-1.7.8/src/acl.c
+-rw-rw-r-- root/root      2299 2017-07-07 09:49 haproxy-1.7.8/src/applet.c
+-rw-rw-r-- root/root      8150 2017-07-07 09:49 haproxy-1.7.8/src/arg.c
+-rw-rw-r-- root/root      6450 2017-07-07 09:49 haproxy-1.7.8/src/auth.c
+-rw-rw-r-- root/root     54646 2017-07-07 09:49 haproxy-1.7.8/src/backend.c
+-rw-rw-r-- root/root      4915 2017-07-07 09:49 haproxy-1.7.8/src/base64.c
+-rw-rw-r-- root/root      9279 2017-07-07 09:49 haproxy-1.7.8/src/buffer.c
+-rw-rw-r-- root/root    316650 2017-07-07 09:49 haproxy-1.7.8/src/cfgparse.c
+-rw-rw-r-- root/root     13601 2017-07-07 09:49 haproxy-1.7.8/src/channel.c
+-rw-rw-r-- root/root    102708 2017-07-07 09:49 haproxy-1.7.8/src/checks.c
+-rw-rw-r-- root/root      7058 2017-07-07 09:49 haproxy-1.7.8/src/chunk.c
+-rw-rw-r-- root/root     25919 2017-07-07 09:49 haproxy-1.7.8/src/cli.c
+-rw-rw-r-- root/root     17039 2017-07-07 09:49 haproxy-1.7.8/src/compression.c
+-rw-rw-r-- root/root     33232 2017-07-07 09:49 haproxy-1.7.8/src/connection.c
+-rw-rw-r-- root/root      9697 2017-07-07 09:49 haproxy-1.7.8/src/da.c
+-rw-rw-r-- root/root     39160 2017-07-07 09:49 haproxy-1.7.8/src/dns.c
+-rw-rw-r-- root/root      6433 2017-07-07 09:49 haproxy-1.7.8/src/ev_epoll.c
+-rw-rw-r-- root/root      5447 2017-07-07 09:49 haproxy-1.7.8/src/ev_kqueue.c
+-rw-rw-r-- root/root      5713 2017-07-07 09:49 haproxy-1.7.8/src/ev_poll.c
+-rw-rw-r-- root/root      5913 2017-07-07 09:49 haproxy-1.7.8/src/ev_select.c
+-rw-rw-r-- root/root     13270 2017-07-07 09:49 haproxy-1.7.8/src/fd.c
+-rw-rw-r-- root/root     31139 2017-07-07 09:49 haproxy-1.7.8/src/filters.c
+-rw-rw-r-- root/root     26188 2017-07-07 09:49 haproxy-1.7.8/src/flt_http_comp.c
+-rw-rw-r-- root/root     92270 2017-07-07 09:49 haproxy-1.7.8/src/flt_spoe.c
+-rw-rw-r-- root/root     16817 2017-07-07 09:49 haproxy-1.7.8/src/flt_trace.c
+-rw-rw-r-- root/root      5577 2017-07-07 09:49 haproxy-1.7.8/src/freq_ctr.c
+-rw-rw-r-- root/root      7655 2017-07-07 09:49 haproxy-1.7.8/src/frontend.c
+-rw-rw-r-- root/root      7533 2017-07-07 09:49 haproxy-1.7.8/src/haproxy-systemd-wrapper.c
+-rw-rw-r-- root/root     60232 2017-07-07 09:49 haproxy-1.7.8/src/haproxy.c
+-rw-rw-r-- root/root      2815 2017-07-07 09:49 haproxy-1.7.8/src/hash.c
+-rw-rw-r-- root/root      1810 2017-07-07 09:49 haproxy-1.7.8/src/hdr_idx.c
+-rw-rw-r-- root/root    211247 2017-07-07 09:49 haproxy-1.7.8/src/hlua.c
+-rw-rw-r-- root/root     25426 2017-07-07 09:49 haproxy-1.7.8/src/hlua_fcn.c
+-rw-rw-r-- root/root      5986 2017-07-07 09:49 haproxy-1.7.8/src/i386-linux-vsys.c
+-rw-rw-r-- root/root     13134 2017-07-07 09:49 haproxy-1.7.8/src/lb_chash.c
+-rw-rw-r-- root/root      8540 2017-07-07 09:49 haproxy-1.7.8/src/lb_fas.c
+-rw-rw-r-- root/root      8233 2017-07-07 09:49 haproxy-1.7.8/src/lb_fwlc.c
+-rw-rw-r-- root/root     16150 2017-07-07 09:49 haproxy-1.7.8/src/lb_fwrr.c
+-rw-rw-r-- root/root      7076 2017-07-07 09:49 haproxy-1.7.8/src/lb_map.c
+-rw-rw-r-- root/root     25478 2017-07-07 09:49 haproxy-1.7.8/src/listener.c
+-rw-rw-r-- root/root     67659 2017-07-07 09:49 haproxy-1.7.8/src/log.c
+-rw-rw-r-- root/root      7910 2017-07-07 09:49 haproxy-1.7.8/src/lru.c
+-rw-rw-r-- root/root       445 2017-07-07 09:49 haproxy-1.7.8/src/mailers.c
+-rw-rw-r-- root/root     31971 2017-07-07 09:49 haproxy-1.7.8/src/map.c
+-rw-rw-r-- root/root      8126 2017-07-07 09:49 haproxy-1.7.8/src/memory.c
+-rw-rw-r-- root/root      2673 2017-07-07 09:49 haproxy-1.7.8/src/namespace.c
+-rw-rw-r-- root/root     68959 2017-07-07 09:49 haproxy-1.7.8/src/pattern.c
+-rw-rw-r-- root/root     29692 2017-07-07 09:49 haproxy-1.7.8/src/payload.c
+-rw-rw-r-- root/root     61633 2017-07-07 09:49 haproxy-1.7.8/src/peers.c
+-rw-rw-r-- root/root      2401 2017-07-07 09:49 haproxy-1.7.8/src/pipe.c
+-rw-rw-r-- root/root    429520 2017-07-07 09:49 haproxy-1.7.8/src/proto_http.c
+-rw-rw-r-- root/root     59109 2017-07-07 09:49 haproxy-1.7.8/src/proto_tcp.c
+-rw-rw-r-- root/root       723 2017-07-07 09:49 haproxy-1.7.8/src/proto_udp.c
+-rw-rw-r-- root/root     20391 2017-07-07 09:49 haproxy-1.7.8/src/proto_uxst.c
+-rw-rw-r-- root/root      2947 2017-07-07 09:49 haproxy-1.7.8/src/protocol.c
+-rw-rw-r-- root/root     49338 2017-07-07 09:49 haproxy-1.7.8/src/proxy.c
+-rw-rw-r-- root/root      7174 2017-07-07 09:49 haproxy-1.7.8/src/queue.c
+-rw-rw-r-- root/root     12594 2017-07-07 09:49 haproxy-1.7.8/src/raw_sock.c
+-rw-rw-r-- root/root      9165 2017-07-07 09:49 haproxy-1.7.8/src/rbtree.c
+-rw-rw-r-- root/root      8058 2017-07-07 09:49 haproxy-1.7.8/src/regex.c
+-rw-rw-r-- root/root     85495 2017-07-07 09:49 haproxy-1.7.8/src/sample.c
+-rw-rw-r-- root/root    118827 2017-07-07 09:49 haproxy-1.7.8/src/server.c
+-rw-rw-r-- root/root     14765 2017-07-07 09:49 haproxy-1.7.8/src/session.c
+-rw-rw-r-- root/root     17005 2017-07-07 09:49 haproxy-1.7.8/src/shctx.c
+-rw-rw-r-- root/root      7485 2017-07-07 09:49 haproxy-1.7.8/src/signal.c
+-rw-rw-r-- root/root    190265 2017-07-07 09:49 haproxy-1.7.8/src/ssl_sock.c
+-rw-rw-r-- root/root     96222 2017-07-07 09:49 haproxy-1.7.8/src/standard.c
+-rw-rw-r-- root/root    122110 2017-07-07 09:49 haproxy-1.7.8/src/stats.c
+-rw-rw-r-- root/root     97142 2017-07-07 09:49 haproxy-1.7.8/src/stick_table.c
+-rw-rw-r-- root/root    103481 2017-07-07 09:49 haproxy-1.7.8/src/stream.c
+-rw-rw-r-- root/root     48219 2017-07-07 09:49 haproxy-1.7.8/src/stream_interface.c
+-rw-rw-r-- root/root      8286 2017-07-07 09:49 haproxy-1.7.8/src/task.c
+-rw-rw-r-- root/root     35581 2017-07-07 09:49 haproxy-1.7.8/src/tcp_rules.c
+-rw-rw-r-- root/root      7811 2017-07-07 09:49 haproxy-1.7.8/src/time.c
+-rw-rw-r-- root/root      6565 2017-07-07 09:49 haproxy-1.7.8/src/trace.c
+-rw-rw-r-- root/root      6471 2017-07-07 09:49 haproxy-1.7.8/src/uri_auth.c
+-rw-rw-r-- root/root     24963 2017-07-07 09:49 haproxy-1.7.8/src/vars.c
+-rw-rw-r-- root/root     27567 2017-07-07 09:49 haproxy-1.7.8/src/wurfl.c
+-rw-rw-r-- root/root     26807 2017-07-07 09:49 haproxy-1.7.8/src/xxhash.c
+drwxrwxr-x root/root         0 2017-07-07 09:49 haproxy-1.7.8/tests/
+-rw-rw-r-- root/root      1633 2017-07-07 09:49 haproxy-1.7.8/tests/0000-debug-stats.diff
+-rw-rw-r-- root/root       376 2017-07-07 09:49 haproxy-1.7.8/tests/blocksig.c
+-rw-rw-r-- root/root      9717 2017-07-07 09:49 haproxy-1.7.8/tests/filltab25.c
+-rw-rw-r-- root/root      8601 2017-07-07 09:49 haproxy-1.7.8/tests/hash_results.txt
+-rw-rw-r-- root/root      8662 2017-07-07 09:49 haproxy-1.7.8/tests/hashing-results.txt
+-rw-rw-r-- root/root      5855 2017-07-07 09:49 haproxy-1.7.8/tests/io_limits.txt
+-rw-rw-r-- root/root      5753 2017-07-07 09:49 haproxy-1.7.8/tests/ip-hash.c
+-rw-rw-r-- root/root      1091 2017-07-07 09:49 haproxy-1.7.8/tests/reset.c
+-rw-rw-r-- root/root       909 2017-07-07 09:49 haproxy-1.7.8/tests/setstatus.lua
+-rw-rw-r-- root/root       174 2017-07-07 09:49 haproxy-1.7.8/tests/sockstat.txt
+-rw-rw-r-- root/root      1106 2017-07-07 09:49 haproxy-1.7.8/tests/test-acl-args.cfg
+-rw-rw-r-- root/root      1538 2017-07-07 09:49 haproxy-1.7.8/tests/test-address-syntax.cfg
+-rw-rw-r-- root/root      1058 2017-07-07 09:49 haproxy-1.7.8/tests/test-arg.c
+-rw-rw-r-- root/root       473 2017-07-07 09:49 haproxy-1.7.8/tests/test-backlog.cfg
+-rw-rw-r-- root/root      2309 2017-07-07 09:49 haproxy-1.7.8/tests/test-check-expect.cfg
+-rw-rw-r-- root/root       883 2017-07-07 09:49 haproxy-1.7.8/tests/test-connection.cfg
+-rw-rw-r-- root/root      1083 2017-07-07 09:49 haproxy-1.7.8/tests/test-cookie-indirect.cfg
+-rw-rw-r-- root/root       734 2017-07-07 09:49 haproxy-1.7.8/tests/test-cookie-insert.cfg
+-rw-rw-r-- root/root       727 2017-07-07 09:49 haproxy-1.7.8/tests/test-cookie-passive.cfg
+-rw-rw-r-- root/root       735 2017-07-07 09:49 haproxy-1.7.8/tests/test-cookie-prefix.cfg
+-rw-rw-r-- root/root       735 2017-07-07 09:49 haproxy-1.7.8/tests/test-cookie-rewrite.cfg
+-rw-rw-r-- root/root      2252 2017-07-07 09:49 haproxy-1.7.8/tests/test-disable-404.cfg
+-rw-rw-r-- root/root     14343 2017-07-07 09:49 haproxy-1.7.8/tests/test-fsm.cfg
+-rw-rw-r-- root/root      2054 2017-07-07 09:49 haproxy-1.7.8/tests/test-fwlc.cfg
+-rw-rw-r-- root/root      1845 2017-07-07 09:49 haproxy-1.7.8/tests/test-fwrr.cfg
+-rw-rw-r-- root/root       777 2017-07-07 09:49 haproxy-1.7.8/tests/test-http-send-name-hdr.cfg
+-rw-rw-r-- root/root       768 2017-07-07 09:49 haproxy-1.7.8/tests/test-http-set-status-lua.cfg
+-rw-rw-r-- root/root       744 2017-07-07 09:49 haproxy-1.7.8/tests/test-http-set-status.cfg
+-rw-rw-r-- root/root      1541 2017-07-07 09:49 haproxy-1.7.8/tests/test-inspect-smtp.cfg
+-rw-rw-r-- root/root      1211 2017-07-07 09:49 haproxy-1.7.8/tests/test-inspect-ssl.cfg
+-rw-rw-r-- root/root       620 2017-07-07 09:49 haproxy-1.7.8/tests/test-map-ports.cfg
+-rw-rw-r-- root/root       331 2017-07-07 09:49 haproxy-1.7.8/tests/test-pollers.cfg
+-rw-rw-r-- root/root      1388 2017-07-07 09:49 haproxy-1.7.8/tests/test-redirect.cfg
+-rw-rw-r-- root/root      1097 2017-07-07 09:49 haproxy-1.7.8/tests/test-sample-fetch-args.cfg
+-rw-rw-r-- root/root      1196 2017-07-07 09:49 haproxy-1.7.8/tests/test-sample-fetch-conv.cfg
+-rw-rw-r-- root/root       733 2017-07-07 09:49 haproxy-1.7.8/tests/test-sql.cfg
+-rw-rw-r-- root/root      1663 2017-07-07 09:49 haproxy-1.7.8/tests/test-str2sa.cfg
+-rw-rw-r-- root/root       713 2017-07-07 09:49 haproxy-1.7.8/tests/test-time.cfg
+-rw-rw-r-- root/root       834 2017-07-07 09:49 haproxy-1.7.8/tests/test-timeout.cfg
+-rw-rw-r-- root/root       731 2017-07-07 09:49 haproxy-1.7.8/tests/test-url-hash.cfg
+-rw-rw-r-- root/root       734 2017-07-07 09:49 haproxy-1.7.8/tests/test-valid-names.cfg
+-rw-rw-r-- root/root       270 2017-07-07 09:49 haproxy-1.7.8/tests/test.c
+-rw-rw-r-- root/root     15131 2017-07-07 09:49 haproxy-1.7.8/tests/test_hashes.c
+-rw-rw-r-- root/root      5725 2017-07-07 09:49 haproxy-1.7.8/tests/test_pools.c
+-rw-rw-r-- root/root       629 2017-07-07 09:49 haproxy-1.7.8/tests/testinet.c
+-rw-rw-r-- root/root      9396 2017-07-07 09:49 haproxy-1.7.8/tests/uri_hash.c
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd haproxy-1.7.8
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.YbybPx
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd haproxy-1.7.8
++ /usr/bin/make TARGET=linux2628 ARCH=x86_64 USE_OPENSSL=1 DEBUG=-ggdb SSL_INC=/include SSL_LIB=/lib ADDLIB=-ldl USE_ZLIB=1 USE_PCRE=1 USE_GETADDRINFO=1
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" \
+      -DBUILD_TARGET='"linux2628"' \
+      -DBUILD_ARCH='"x86_64"' \
+      -DBUILD_CPU='"generic"' \
+      -DBUILD_CC='"gcc"' \
+      -DBUILD_CFLAGS='"-m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv"' \
+      -DBUILD_OPTIONS='"USE_GETADDRINFO=1 USE_ZLIB=1 USE_OPENSSL=1 USE_PCRE=1"' \
+       -c -o src/haproxy.o src/haproxy.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/base64.o src/base64.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/protocol.o src/protocol.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/uri_auth.o src/uri_auth.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/standard.o src/standard.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/buffer.o src/buffer.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/log.o src/log.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/task.o src/task.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/chunk.o src/chunk.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/channel.o src/channel.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/listener.o src/listener.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/lru.o src/lru.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/xxhash.o src/xxhash.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/time.o src/time.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/fd.o src/fd.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/pipe.o src/pipe.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/regex.o src/regex.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/cfgparse.o src/cfgparse.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/server.o src/server.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/checks.o src/checks.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/queue.o src/queue.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/frontend.o src/frontend.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/proxy.o src/proxy.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/peers.o src/peers.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/arg.o src/arg.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/stick_table.o src/stick_table.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/proto_uxst.o src/proto_uxst.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/connection.o src/connection.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/proto_http.o src/proto_http.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/raw_sock.o src/raw_sock.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/backend.o src/backend.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/tcp_rules.o src/tcp_rules.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/lb_chash.o src/lb_chash.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/lb_fwlc.o src/lb_fwlc.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/lb_fwrr.o src/lb_fwrr.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/lb_map.o src/lb_map.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/lb_fas.o src/lb_fas.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/stream_interface.o src/stream_interface.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/stats.o src/stats.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/proto_tcp.o src/proto_tcp.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/applet.o src/applet.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/session.o src/session.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/stream.o src/stream.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/hdr_idx.o src/hdr_idx.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/ev_select.o src/ev_select.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/signal.o src/signal.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/acl.o src/acl.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/sample.o src/sample.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/memory.o src/memory.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/freq_ctr.o src/freq_ctr.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/auth.o src/auth.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/proto_udp.o src/proto_udp.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/compression.o src/compression.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/payload.o src/payload.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/hash.o src/hash.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/pattern.o src/pattern.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/map.o src/map.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/namespace.o src/namespace.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/mailers.o src/mailers.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/dns.o src/dns.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/vars.o src/vars.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/filters.o src/filters.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/flt_http_comp.o src/flt_http_comp.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/flt_trace.o src/flt_trace.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/flt_spoe.o src/flt_spoe.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/cli.o src/cli.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/ev_poll.o src/ev_poll.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/ev_epoll.o src/ev_epoll.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/ssl_sock.o src/ssl_sock.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o src/shctx.o src/shctx.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/ebtree.o ebtree/ebtree.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/eb32tree.o ebtree/eb32tree.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/eb64tree.o ebtree/eb64tree.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/ebmbtree.o ebtree/ebmbtree.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/ebsttree.o ebtree/ebsttree.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/ebimtree.o ebtree/ebimtree.c
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" -c -o ebtree/ebistree.o ebtree/ebistree.c
+gcc -m64 -march=x86-64 -g -o haproxy src/haproxy.o src/base64.o src/protocol.o src/uri_auth.o src/standard.o src/buffer.o src/log.o src/task.o src/chunk.o src/channel.o src/listener.o src/lru.o src/xxhash.o src/time.o src/fd.o src/pipe.o src/regex.o src/cfgparse.o src/server.o src/checks.o src/queue.o src/frontend.o src/proxy.o src/peers.o src/arg.o src/stick_table.o src/proto_uxst.o src/connection.o src/proto_http.o src/raw_sock.o src/backend.o src/tcp_rules.o src/lb_chash.o src/lb_fwlc.o src/lb_fwrr.o src/lb_map.o src/lb_fas.o src/stream_interface.o src/stats.o src/proto_tcp.o src/applet.o src/session.o src/stream.o src/hdr_idx.o src/ev_select.o src/signal.o src/acl.o src/sample.o src/memory.o src/freq_ctr.o src/auth.o src/proto_udp.o src/compression.o src/payload.o src/hash.o src/pattern.o src/map.o src/namespace.o src/mailers.o src/dns.o src/vars.o src/filters.o src/flt_http_comp.o src/flt_trace.o src/flt_spoe.o src/cli.o src/ev_poll.o src/ev_epoll.o src/ssl_sock.o src/shctx.o ebtree/ebtree.o ebtree/eb32tree.o ebtree/eb64tree.o ebtree/ebmbtree.o ebtree/ebsttree.o ebtree/ebimtree.o ebtree/ebistree.o   -lcrypt  -lz -ldl -L/lib -lssl -lcrypto -ldl -L/usr/lib -lpcreposix -lpcre -ldl
+gcc -Iinclude -Iebtree -Wall -m64 -march=x86-64 -O2 -g -fno-strict-aliasing -Wdeclaration-after-statement -fwrapv     -ggdb  -DCONFIG_HAP_LINUX_SPLICE -DTPROXY -DCONFIG_HAP_LINUX_TPROXY -DCONFIG_HAP_CRYPT -DUSE_GETADDRINFO -DUSE_ZLIB  -DENABLE_POLL -DENABLE_EPOLL -DUSE_CPU_AFFINITY -DASSUME_SPLICE_WORKS -DUSE_ACCEPT4 -DNETFILTER -DUSE_GETSOCKNAME -DUSE_OPENSSL -I/include -DUSE_SYSCALL_FUTEX -DUSE_PCRE -I/usr/include  -DCONFIG_HAPROXY_VERSION=\"1.7.8\" -DCONFIG_HAPROXY_DATE=\"2017/07/07\" \
+      -DSBINDIR='"/usr/local/sbin"' \
+       -c -o src/haproxy-systemd-wrapper.o src/haproxy-systemd-wrapper.c
+gcc -m64 -march=x86-64 -g -o haproxy-systemd-wrapper src/haproxy-systemd-wrapper.o   -lcrypt  -lz -ldl -L/lib -lssl -lcrypto -ldl -L/usr/lib -lpcreposix -lpcre -ldl
++ exit 0
++ umask 022
++ cd /root/rpmbuild/BUILD
++ '[' /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64 '!=' / ']'
++ rm -rf /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64
+++ dirname /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.9SJwPW
++ mkdir -p /root/rpmbuild/BUILDROOT
++ mkdir /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64
++ cd haproxy-1.7.8
++ '[' /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64 '!=' / ']'
++ /usr/bin/rm -rf /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64
++ /usr/bin/install -d /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/sbin
++ /usr/bin/install -d /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/etc/rc.d/init.d
++ /usr/bin/install -d /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/etc/haproxy
++ /usr/bin/install -d /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/man/man1/
++ /usr/bin/install -d /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/var/lib/haproxy
++ mkdir -p /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/etc/haproxy/errors
++ mkdir -p /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/haproxy
++ cp examples/errorfiles/503.http /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/etc/haproxy/errors/503.http
++ /usr/bin/install -s haproxy /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/sbin/
++ /usr/bin/install -c -m 755 examples/haproxy.init /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/etc/rc.d/init.d/haproxy
++ /usr/bin/install -c -m 755 doc/haproxy.1 /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/man/man1/
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /root/rpmbuild/BUILD/haproxy-1.7.8
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: haproxy-1.7.8-1.el7.centos.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.UDrJkm
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd haproxy-1.7.8
++ DOCDIR=/root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/doc/haproxy-1.7.8
++ export DOCDIR
++ /usr/bin/mkdir -p /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/doc/haproxy-1.7.8
++ cp -pr CHANGELOG /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/doc/haproxy-1.7.8
++ cp -pr examples/acl-content-sw.cfg examples/auth.cfg examples/content-sw-sample.cfg examples/option-http_proxy.cfg examples/ssl.cfg examples/transparent_proxy.cfg examples/wurfl-example.cfg /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/doc/haproxy-1.7.8
++ cp -pr doc/51Degrees-device-detection.txt doc/DeviceAtlas-device-detection.txt doc/SPOE.txt doc/WURFL-device-detection.txt doc/architecture.txt doc/close-options.txt doc/coding-style.txt doc/configuration.txt doc/cookie-options.txt doc/gpl.txt doc/intro.txt doc/lgpl.txt doc/linux-syn-cookies.txt doc/lua.txt doc/management.txt doc/netscaler-client-ip-insertion-protocol.txt doc/network-namespaces.txt doc/proxy-protocol.txt /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64/usr/share/doc/haproxy-1.7.8
++ exit 0
+Provides: config(haproxy) = 1.7.8-1.el7.centos haproxy = 1.7.8-1.el7.centos haproxy(x86-64) = 1.7.8-1.el7.centos
+Requires(interp): /bin/sh /bin/sh /bin/sh /bin/sh
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(pre): /bin/sh
+Requires(post): /bin/sh
+Requires(preun): /bin/sh
+Requires(postun): /bin/sh
+Requires: /bin/sh libc.so.6()(64bit) libc.so.6(GLIBC_2.10)(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.2)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.5)(64bit) libcrypt.so.1()(64bit) libcrypt.so.1(GLIBC_2.2.5)(64bit) libcrypto.so.10()(64bit) libcrypto.so.10(OPENSSL_1.0.1)(64bit) libcrypto.so.10(OPENSSL_1.0.1_EC)(64bit) libcrypto.so.10(libcrypto.so.10)(64bit) libdl.so.2()(64bit) libpcre.so.1()(64bit) libpcreposix.so.0()(64bit) libssl.so.10()(64bit) libssl.so.10(libssl.so.10)(64bit) libz.so.1()(64bit) rtld(GNU_HASH)
+Processing files: haproxy-debuginfo-1.7.8-1.el7.centos.x86_64
+Provides: haproxy-debuginfo = 1.7.8-1.el7.centos haproxy-debuginfo(x86-64) = 1.7.8-1.el7.centos
+Requires(rpmlib): rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1 rpmlib(CompressedFileNames) <= 3.0.4-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64
+Wrote: /root/rpmbuild/RPMS/x86_64/haproxy-1.7.8-1.el7.centos.x86_64.rpm
+Wrote: /root/rpmbuild/RPMS/x86_64/haproxy-debuginfo-1.7.8-1.el7.centos.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.vpETSD
++ umask 022
++ cd /root/rpmbuild/BUILD
++ cd haproxy-1.7.8
++ '[' /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64 '!=' / ']'
++ /usr/bin/rm -rf /root/rpmbuild/BUILDROOT/haproxy-1.7.8-1.el7.centos.x86_64
++ exit 0
+Executing(--clean): /bin/sh -e /var/tmp/rpm-tmp.gvhcJ4
++ umask 022
++ cd /root/rpmbuild/BUILD
++ rm -rf haproxy-1.7.8
++ exit 0
+[root@ssi-centos7 scripts]# 
+
